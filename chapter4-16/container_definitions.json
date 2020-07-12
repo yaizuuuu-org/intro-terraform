@@ -1,0 +1,21 @@
+[
+  {
+    "name": "example",
+    "image": "nginx",
+    "essential": true,
+    "portMappings": [
+      {
+        "protocol": "tcp",
+        "containerPort": 80
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-region": "us-east-1",
+        "awslogs-stream-prefix": "nginx",
+        "awslogs-group": "/ecs/example"
+      }
+    }
+  }
+]

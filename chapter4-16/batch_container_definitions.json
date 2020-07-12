@@ -1,0 +1,28 @@
+[
+  {
+    "name": "alpine",
+    "image": "alpine:latest",
+    "essential": true,
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-region": "us-east-1",
+        "awslogs-stream-prefix": "batch",
+        "awslogs-group": "/ecs-scheduled-tasks/example"
+      }
+    },
+    "command": [
+      "/usr/bin/env"
+    ],
+    "secrets": [
+      {
+        "name": "DB_USERNAME",
+        "valueFrom": "/db/username"
+      },
+      {
+        "name": "DB_PASSWORD",
+        "valueFrom": "/db/raw_password"
+      }
+    ]
+  }
+]

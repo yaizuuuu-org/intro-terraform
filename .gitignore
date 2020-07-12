@@ -1,0 +1,6 @@
+.idea
+*.backup
+.terraform
+*.tfstate
+*.info
+chapter4-16/deploy_pipeline.tf
