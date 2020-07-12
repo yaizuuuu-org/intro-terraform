@@ -2,6 +2,7 @@
   {
     "name": "example",
     "image": "nginx",
+    "executionRoleArn": "arn:aws:iam::808899547094:role/ecsTaskExecutionRole",
     "essential": true,
     "portMappings": [
       {
