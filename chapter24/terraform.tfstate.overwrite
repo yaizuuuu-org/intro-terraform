@@ -1,0 +1,42 @@
+{
+  "version": 4,
+  "terraform_version": "0.12.28",
+  "serial": 2,
+  "lineage": "d725d639-4b7c-d3ea-ced9-2f2a991420f4",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "null_resource",
+      "name": "bar",
+      "provider": "provider.null",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "1452742921412037801",
+            "triggers": null
+          },
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "null_resource",
+      "name": "overwrite",
+      "provider": "provider.null",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "5332373859801455826",
+            "triggers": null
+          },
+          "private": "bnVsbA=="
+        }
+      ]
+    }
+  ]
+}
+
