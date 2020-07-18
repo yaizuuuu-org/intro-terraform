@@ -4,3 +4,4 @@
 *.tfstate
 *.info
 chapter4-16/deploy_pipeline.tf
+*backend.tf
