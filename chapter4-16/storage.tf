@@ -17,15 +17,15 @@ resource "aws_s3_bucket" "private" {
 resource "aws_s3_bucket_public_access_block" "private" {
   bucket = aws_s3_bucket.private.id
 
-  block_public_acls = true
-  block_public_policy = true
-  ignore_public_acls = true
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
   restrict_public_buckets = true
 }
 
 resource "aws_s3_bucket" "public" {
   bucket = "yaizuuuu-pragmatic-terraform"
-  acl = "public-read"
+  acl    = "public-read"
 
   cors_rule {
     allowed_methods = ["GET"]
@@ -49,12 +49,12 @@ resource "aws_s3_bucket" "alb_log" {
 
 data "aws_iam_policy_document" "alb_log" {
   statement {
-    effect = "Allow"
-    actions = ["s3:PutObject"]
+    effect    = "Allow"
+    actions   = ["s3:PutObject"]
     resources = ["arn:aws:s3:::${aws_s3_bucket.alb_log.id}/*"]
     principals {
       identifiers = ["127311923021"]
-      type = "AWS"
+      type        = "AWS"
     }
   }
 }
