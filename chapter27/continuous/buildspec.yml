@@ -7,7 +7,7 @@ env:
 phases:
   install:
     commands:
-      - echo ${CODEBUILD_SRC_DIR}
+      - ls -al ${CODEBUILD_SRC_DIR}/chapter27
       - ${CODEBUILD_SRC_DIR}/chapter27/continuous/scripts/install.sh
   build:
     commands:
